@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Найди счастливую карту</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen">
+        <h1>Выбери уровень сложности</h1>
+        <div class="menu-check">
+            <label class="checkbox-label">
+                <input type="checkbox" value="3" class="level-checkbox"> Простой (3 карты)
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" value="6" class="level-checkbox"> Средний (6 карт)
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" value="9" class="level-checkbox"> Сложный (9 карт)
+            </label>
+        </div>
+        <div class="manual-container">
+            <label class="checkbox-label">
+                <input type="checkbox" value="manual" class="level-checkbox"> Задать вручную количество карт: 
+            </label>
+            <input type="number" id="manual-input">
+        </div>
+        <div id="error"></div>
+        <button id="start-button">Играть</button>
+    </div>
+    <div id="game-screen">
+        <div id="cards-container"></div>
+    </div>
+    <script src="game.js" defer></script>
+</body>
+</html>
