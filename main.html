@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Найди счастливую карту</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="start-screen">
-        <h1>Выбери уровень сложности</h1>
-        <div class="menu-check">
-            <label class="checkbox-label">
-                <input type="checkbox" value="3" class="level-checkbox"> Простой (3 карты)
-            </label>
-            <label class="checkbox-label">
-                <input type="checkbox" value="6" class="level-checkbox"> Средний (6 карт)
-            </label>
-            <label class="checkbox-label">
-                <input type="checkbox" value="9" class="level-checkbox"> Сложный (9 карт)
-            </label>
-        </div>
-        <div class="manual-container">
-            <label class="checkbox-label">
-                <input type="checkbox" value="manual" class="level-checkbox"> Задать вручную количество карт: 
-            </label>
-            <input type="number" id="manual-input">
-        </div>
-        <div id="error"></div>
-        <button id="start-button">Играть</button>
-    </div>
-    <div id="game-screen">
-        <div id="cards-container"></div>
-    </div>
+    <link rel="stylesheet" href="style.css" />
     <script src="game.js" defer></script>
-</body>
+  </head>
+  <body>
+    <div id="start-screen">
+      <h2>Выбери уровень сложности</h2>
+      <div class="start-screen__menu">
+        <label class="start-screen__checkbox">
+          <input type="radio" value="3" name="select" />
+          <span>Простой (3 карты)</span>
+        </label>
+        <label class="start-screen__checkbox">
+          <input type="radio" value="6" name="select" />
+          <span>Средний (6 карт)</span>
+        </label>
+        <label class="start-screen__checkbox">
+          <input type="radio" value="9" name="select" />
+          <span>Сложный (9 карт)</span>
+        </label>
+        <div class="start-screen__manual">
+          <label class="start-screen__checkbox">
+            <input type="radio" value="manual" name="select" />
+            <span>Задать количество карт:</span>
+          </label>
+          <input type="number" id="start-screen__number" />
+        </div>
+        <p id="start-screen__error"></p>
+        <button id="start-screen__button">Играть</button>
+      </div>
+    </div>
+
+    <div id="game-screen">
+      <div id="game-screen__cards-container"></div>
+    </div>
+  </body>
 </html>
